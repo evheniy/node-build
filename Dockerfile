@@ -8,4 +8,4 @@ RUN yarn global add lerna serverless cypress
 RUN yarn --version
 RUN lerna --version
 RUN sls --version
-RUN cypress -- version
+RUN cypress --version
