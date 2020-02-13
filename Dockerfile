@@ -1,4 +1,4 @@
-FROM node:dubnium
+FROM node:lts-buster
 
 RUN apt-get update
 RUN apt-get -y install python3 python3-pip python3-setuptools libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
