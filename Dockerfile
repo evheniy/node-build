@@ -30,7 +30,7 @@ RUN set -x && apt-get update && apt-get install -y google-chrome-stable
 ENV CHROME_BIN /usr/bin/google-chrome
 
 # Show installed versions
-RUN set -x && node -v && npm -v && google-chrome --version
+RUN set -x && google-chrome --version
 
 # updating npm
 RUN npm i -g npm
