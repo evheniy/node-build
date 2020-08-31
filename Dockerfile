@@ -29,6 +29,9 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 RUN set -x && apt-get update && apt-get install -y google-chrome-stable
 ENV CHROME_BIN /usr/bin/google-chrome
 
+# Show installed versions
+RUN set -x && node -v && npm -v && google-chrome --version
+
 # updating npm
 RUN npm i -g npm
 RUN npm -v
