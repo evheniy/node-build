@@ -1,5 +1,5 @@
 # Debian 10 (Buster) + nodejs 14
-FROM node:lts-buster
+FROM node:14-buster
 
 # current version
 RUN node -v
