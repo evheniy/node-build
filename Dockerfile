@@ -1,4 +1,4 @@
-# Debian 10 (Buster) + nodejs 12
+# Debian 10 (Buster) + nodejs 14
 FROM node:lts-buster
 
 # current version
