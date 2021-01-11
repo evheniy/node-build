@@ -8,5 +8,6 @@
 * lerna
 * serverless
 * puppeteer
+* aws-lambda-rie
 
 
