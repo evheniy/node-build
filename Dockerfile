@@ -39,11 +39,13 @@ ENV CHROME_BIN /usr/bin/google-chrome
 RUN set -x && google-chrome --version
 
 # JAVA
-RUN apt-get install -yq default-jre
+RUN apt-get install -yq openjdk-11-jdk
 
 RUN java -version
 
-ENV JAVA_HOME $(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+
+# RUN export JAVA_HOME=$(update-alternatives --list java)
 RUN echo $JAVA_HOME
 
 # updating npm

@@ -2,7 +2,7 @@
   "name": "node-build",
   "private": true,
   "scripts": {
-    "build": "docker build -t node .",
-    "clean": "docker rmi -f node"
+    "build": "docker build -t node-build .",
+    "clean": "docker rmi -f node-build"
   }
 }
