@@ -42,6 +42,8 @@ RUN set -x && google-chrome --version
 RUN apt-get install -yq default-jre
 
 RUN java -version
+
+ENV JAVA_HOME $(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 RUN echo $JAVA_HOME
 
 # updating npm
