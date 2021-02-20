@@ -38,6 +38,12 @@ ENV CHROME_BIN /usr/bin/google-chrome
 # Show installed versions
 RUN set -x && google-chrome --version
 
+# JAVA
+RUN apt-get install -yq default-jre
+
+RUN java -version
+RUN echo $JAVA_HOME
+
 # updating npm
 RUN npm i -g npm
 RUN npm -v
