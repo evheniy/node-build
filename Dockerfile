@@ -43,7 +43,7 @@ RUN apt-get install -yq openjdk-11-jdk
 
 RUN java -version
 
-ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
 
 # RUN export JAVA_HOME=$(update-alternatives --list java)
 RUN echo $JAVA_HOME
