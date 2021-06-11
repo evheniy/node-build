@@ -8,6 +8,8 @@ RUN yarn --version
 
 RUN python --version
 
+COPY ./package.json /package.json
+
 # python 3 + pip
 RUN apt-get update
 RUN apt-get install -yq python3 python3-pip python3-setuptools
