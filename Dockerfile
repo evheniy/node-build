@@ -60,7 +60,8 @@ RUN npm i -g npm
 RUN npm -v
 
 # Latest lerna + serverless
-RUN npm i -g lerna serverless aws-lambda-ric
+RUN npm i -g lerna serverless aws-lambda-ric puppeteer
 
 RUN lerna --version
 RUN sls --version
+RUN npm list -g

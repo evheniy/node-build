@@ -1,9 +1,21 @@
 {
   "name": "node-build",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "private": true,
   "scripts": {
     "build": "docker build -t node-build .",
+    "versions": "npm-run-all versions:*",
+    "versions:debian": "docker run -it --rm node-build /bin/bash -c 'lsb_release -d && cat /etc/debian_version'",
+    "versions:node": "docker run -it --rm node-build /bin/bash -c 'node -v'",
+    "versions:yarn": "docker run -it --rm node-build /bin/bash -c 'yarn --version'",
+    "versions:npm": "docker run -it --rm node-build /bin/bash -c 'npm list -g'",
+    "versions:chrome": "docker run -it --rm node-build /bin/bash -c 'google-chrome --version'",
+    "versions:python": "docker run -it --rm node-build /bin/bash -c 'python --version'",
+    "versions:python3": "docker run -it --rm node-build /bin/bash -c 'python3 --version'",
+    "versions:pip3": "docker run -it --rm node-build /bin/bash -c 'pip3 --version'",
+    "versions:aws": "docker run -it --rm node-build /bin/bash -c 'aws --version'",
+    "versions:java": "docker run -it --rm node-build /bin/bash -c 'java -version'",
+    "versions:java-home": "docker run -it --rm node-build /bin/bash -c 'echo $JAVA_HOME'",
     "clean": "docker rmi -f node-build"
   }
 }
