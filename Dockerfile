@@ -1,6 +1,8 @@
 # Debian 10 (Buster) + nodejs 14
 FROM node:14-buster
 
+COPY ./package.json /package.json
+
 # Current version
 RUN node -v
 RUN npm -v
@@ -8,12 +10,12 @@ RUN yarn --version
 
 RUN python --version
 
-# Set yarn cache directory
-RUN mkdir -p /yarn_cache
-RUN yarn config set cache-folder /yarn_cache
-RUN yarn cache dir
+# yarn 3
+RUN yarn set version berry
+RUN yarn -v 
 
-COPY ./package.json /package.json
+# Create directory for yarn cache 
+RUN mkdir -p /yarn_cache
 
 # Python 3 + pip
 RUN apt-get update
@@ -60,8 +62,7 @@ RUN npm i -g npm
 RUN npm -v
 
 # Latest lerna + serverless
-RUN npm i -g lerna serverless aws-lambda-ric puppeteer
+RUN npm i -g serverless aws-lambda-ric puppeteer
 
-RUN lerna --version
 RUN sls --version
 RUN npm list -g
