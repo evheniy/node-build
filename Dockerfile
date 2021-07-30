@@ -14,9 +14,6 @@ RUN python --version
 RUN yarn set version berry
 RUN yarn -v 
 
-# Create directory for yarn cache 
-RUN mkdir -p /yarn_cache
-
 # Python 3 + pip
 RUN apt-get update
 RUN apt-get install -yq python3 python3-pip python3-setuptools
